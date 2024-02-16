@@ -1,27 +1,57 @@
-# AddressProject
+# Desafio Consulta de CEP com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+Este projeto é uma aplicação Angular que permite aos usuários buscar informações de endereço com base nos códigos postais brasileiros. Os usuários podem inserir um CEP e consultar os detalhes do endereço correspondente.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Campo de entrada para os usuários inserirem um CEP.
+- Botão para acionar a busca de endereço.
+- Exibição de detalhes do endereço, como nome da rua, bairro, cidade, estado, etc.
+- Tratamento de erro para CEPs inválidos ou não encontrados.
 
-## Code scaffolding
+## Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular: Framework frontend para construir a interface do usuário.
+- Bootstrap: Framework CSS para estilizar a aplicação.
+- TypeScript: Linguagem de programação usada com Angular.
+- HTML/CSS: Marcação e estilização para a interface do usuário.
 
-## Build
+## Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone o repositório:
 
-## Running unit tests
+```
+git clone https://github.com/mjuli/cep-challenge-angular.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Navegue até o diretório do projeto:
 
-## Running end-to-end tests
+```
+cd cep-challenge-angular
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Instale as dependências:
 
-## Further help
+```
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+
+1. Antes de iniciar, é necessário verificar o link da url que realizará a consulta no serviço `consulta-cep.service`. Caso seja necessário, atualize a url.
+
+2. Inicie o servidor de desenvolvimento:
+
+```
+ng serve
+```
+
+3. Abra seu navegador e vá para `http://localhost:4200`.
+
+4. Insira um CEP brasileiro válido no campo de entrada e clique no botão "Buscar".
+
+5. Veja os dados do endereço recuperados pela API de busca.
+
+## Layout App
+
+![Web](https://github.com/mjuli/cep-challenge-angular/blob/main/src/assets/BuscaCEP.png)
