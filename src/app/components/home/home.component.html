@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-12 my-4">
+
+      <div class="form" [ngClass]="{'error-height': erroCep || erroService}">
+        <div class="title">Busca CEP</div>
+
+        <div class="subtitle">Consulte CEPs de todo o Brasil</div>
+        <div class="input-container ic1">
+          <input id="cep" name="cep" class="input" type="text" ngModel [(ngModel)]="cep" placeholder=" " required />
+          <div class="cut"></div>
+          <label for="cep" class="placeholder">Por favor digite um CEP</label>
+        </div>
+        <button (click)="consultarCEP()" type="text" class="submit">Consultar</button>
+        @if (erroCep) {
+        <span class="erro-msg"> CEP inválido </span>
+        }
+        @if (erroService && !erroCep) {
+        <span class="erro-msg"> Erro ao buscar endereço </span>
+        }
+        <div class="input-container ic2">
+          <input name="logradouro" id="logradouro" ngModel [(ngModel)]="logradouro" class="input" type="text"
+            placeholder=" " disabled />
+          <div class="cut cut-log"></div>
+          <label for="logradouro" class="placeholder">Logradouro</label>
+        </div>
+        <div class="input-container ic2">
+          <input name="bairro" id="bairro" ngModel [(ngModel)]="bairro" class="input" type="text" placeholder=" "
+            disabled />
+          <div class="cut cut-bar"></div>
+          <label for="bairro" class="placeholder">Bairro</label>
+        </div>
+        <div class="input-container ic2">
+          <input name="localidade" id="localidade" ngModel [(ngModel)]="localidade" class="input" type="text"
+            placeholder=" " disabled />
+          <div class="cut cut-loc"></div>
+          <label for="localidade" class="placeholder">Cidade</label>
+        </div>
+        <div class="input-container ic2">
+          <input name="uf" id="uf" ngModel [(ngModel)]="uf" class="input" type="text" placeholder=" " disabled />
+          <div class="cut cut-uf"></div>
+          <label for="uf" class="placeholder">UF</label>
+        </div>
+        <div class="input-container ic2">
+          <input name="ddd" id="ddd" ngModel [(ngModel)]="ddd" class="input" type="text" placeholder=" " disabled />
+          <div class="cut cut-ddd"></div>
+          <label for="ddd" class="placeholder">DDD</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
